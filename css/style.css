@@ -33,6 +33,7 @@ html{
     background-repeat: no-repeat;
     background-attachment: fixed;
     height: 100vh;
+    min-height: 100vh;
     width: 100%;
     overflow: hidden;
 }
@@ -144,6 +145,7 @@ html{
 .about{
     padding-top: 5em;
     height: 100vh;
+    min-height: 100vh;
 }
 .about .title{
     text-align: center;
@@ -233,6 +235,7 @@ html{
 .services{
     background-color: black;
     height: 100vh;
+    min-height: 100vh;
     width: 100%;
     margin-top: 3em;
     padding: 5em 0;
@@ -308,6 +311,7 @@ html{
                                             /* skills */
 .skills{
     height: 100vh;
+    min-height: 100vh;
     padding-bottom: 2em;
     padding-top: 5em;
 }
@@ -408,6 +412,7 @@ html{
     background-color: black;
     color: white;
     height: 100vh;
+    min-height: 100vh;
     width: 100%;
     padding-top: 5em;
 }
