@@ -34,7 +34,6 @@ html{
     background-repeat: no-repeat;
     background-attachment: fixed;
     height: 100vh;
-    min-height: 100vh;
     width: 100%;
     overflow: hidden;
 }
@@ -145,7 +144,6 @@ html{
                                             /* about */
 .about{
     padding-top: 5em;
-    height: 100vh;
     min-height: 100vh;
 }
 .about .title{
@@ -235,7 +233,6 @@ html{
                                    /* services */
 .services{
     background-color: black;
-    height: 100vh;
     min-height: 100vh;
     width: 100%;
     margin-top: 3em;
@@ -311,7 +308,6 @@ html{
 
                                             /* skills */
 .skills{
-    height: 100vh;
     min-height: 100vh;
     padding-bottom: 2em;
     padding-top: 5em;
@@ -412,7 +408,6 @@ html{
 .contact{
     background-color: black;
     color: white;
-    height: 100vh;
     min-height: 100vh;
     width: 100%;
     padding-top: 5em;
