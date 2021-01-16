@@ -37,27 +37,26 @@ html{
     width: 100%;
     overflow: hidden;
 }
-@media(min-width:280px){
-    .home .custom-shape-divider-bottom-1610607306 {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        overflow: hidden;
-        line-height: 0;
-        transform: rotate(180deg);
-    }
-    
-    .home .custom-shape-divider-bottom-1610607306 svg {
-        position: relative;
-        display: block;
-        width: calc(100% + 1.3px);
-        height: 150px;
-    }
-    
-    .home .custom-shape-divider-bottom-1610607306 .shape-fill {
-        fill: white;
-    }
+
+.home .custom-shape-divider-bottom-1610607306 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.home .custom-shape-divider-bottom-1610607306 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 150px;
+}
+
+.home .custom-shape-divider-bottom-1610607306 .shape-fill {
+    fill: white;
 }
                                         /* navbar */
 .home .navbar-dark{
