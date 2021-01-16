@@ -484,6 +484,13 @@ html{
         margin-bottom: 2em;
     }
 }
+@media(max-width:400px){
+    .contact .row .left-column .list-group-item span i{
+        padding-right: 1em;
+        font-size: 1em;
+    }
+}
+                                                    /* footer */
 .footer .list-group-item{
     background-image: linear-gradient(135deg, #556ddb 0%, #7240a3 100%) !important;
 }
