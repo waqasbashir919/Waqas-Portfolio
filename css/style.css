@@ -145,6 +145,9 @@ html{
 .about{
     padding-top: 5em;
     min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 .about .title{
     text-align: center;
@@ -237,6 +240,9 @@ html{
     width: 100%;
     margin-top: 3em;
     padding: 5em 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }   
 .services .title{
     text-align: center;
@@ -309,8 +315,10 @@ html{
                                             /* skills */
 .skills{
     min-height: 100vh;
-    padding-bottom: 2em;
-    padding-top: 5em;
+    padding: 5em 0 2em 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 .skills .title{
     text-align: center;
@@ -411,6 +419,9 @@ html{
     min-height: 100vh;
     width: 100%;
     padding-top: 5em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 .contact .title{
     text-align: center;
