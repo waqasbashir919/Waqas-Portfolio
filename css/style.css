@@ -18,6 +18,7 @@ html{
     bottom: 3%;
     z-index: 999;
     pointer-events: none;
+    cursor: pointer;
     opacity: 0;
     transition: 0.3s ease;
 }
