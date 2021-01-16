@@ -38,7 +38,7 @@ html{
     overflow: hidden;
 }
 
-@media(min-width:480px){
+@media(min-width:481px){
     .home .custom-shape-divider-bottom-1610607306 {
         position: absolute;
         bottom: 0;
