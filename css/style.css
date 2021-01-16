@@ -33,12 +33,10 @@ html{
     background-repeat: no-repeat;
     background-attachment: fixed;
     height: 100vh;
-    max-height: 100vh;
     width: 100%;
     overflow: hidden;
 }
-
-@media(min-width:481px){
+@media(min-width:480px){
     .home .custom-shape-divider-bottom-1610607306 {
         position: absolute;
         bottom: 0;
@@ -60,6 +58,7 @@ html{
         fill: white;
     }
 }
+
                                         /* navbar */
 .home .navbar-dark{
     background-color: rgba(0,0,0,0) !important;
@@ -144,6 +143,7 @@ html{
                                             /* about */
 .about{
     padding-top: 5em;
+    height: 100vh;
 }
 .about .title{
     text-align: center;
@@ -218,7 +218,7 @@ html{
     background-image: linear-gradient(135deg, #203386 0%, #5d2991 100%);
     border-color: linear-gradient(135deg, #21348a 0%, #4a1c77 100%);
 }
-                        /* responsive media query */
+                             /* responsive media query */
 @media(max-width:767px)
 {
     .about .row .myimg{
@@ -232,7 +232,7 @@ html{
                                    /* services */
 .services{
     background-color: black;
-    min-height: 50vh;
+    height: 100vh;
     width: 100%;
     margin-top: 3em;
     padding: 5em 0;
@@ -307,7 +307,7 @@ html{
 
                                             /* skills */
 .skills{
-    min-height: 50vh;
+    height: 100vh;
     padding-bottom: 2em;
     padding-top: 5em;
 }
@@ -407,7 +407,7 @@ html{
 .contact{
     background-color: black;
     color: white;
-    min-height: 50vh;
+    height: 100vh;
     width: 100%;
     padding-top: 5em;
 }
