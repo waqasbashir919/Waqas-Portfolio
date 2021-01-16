@@ -485,9 +485,8 @@ html{
     }
 }
 @media(max-width:400px){
-    .contact .row .left-column .list-group-item span i{
-        padding-right: 1em;
-        font-size: 1em;
+    .contact .row .left-column .list-group-item{
+        font-size: 3vw;
     }
 }
                                                     /* footer */
