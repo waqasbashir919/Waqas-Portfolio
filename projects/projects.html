@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>My Projects</title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .project-card {
+            margin-bottom: 20px;
+        }
+
+        .project-image {
+            max-width: 100%;
+            height: auto;
+        }
+        .modal .base_img{
+            width:100%;
+        }
+        .modal .thumbnails-container img{
+            width: 50px;
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div id="home" class="container-fluid home p-0">
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top px-5">
+            <a href="#" class="navbar-brand">Port<span>folio.</span></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsecontent" aria-controls="collapsecontent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="collapsecontent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item mr-3"><a href="#home" class="nav-link">Home</a></li>
+                    <li class="nav-item mr-3"><a href="#about" class="nav-link">About</a></li>
+                    <li class="nav-item mr-3"><a href="#services" class="nav-link">Services</a></li>
+                    <li class="nav-item mr-3"><a href="#skills" class="nav-link">Skills</a></li>
+                    <li class="nav-item mr-3"><a href="#contact" class="nav-link">Contacts</a></li>
+                    <li class="nav-item mr-3"><a href="projects/projects.html" class="nav-link">Projects</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="container mt-4">
+            <h1 class="text-center mb-4">Project Catalog</h1>
+            <div class="row" id="projectContainer">
+                <!-- Project cards will be dynamically added here using JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Sample data for projects
+        const projects = [
+            { id:1, image : "../assets/webeees/1.jpg", title: "WeBeees", description: "Description of Project 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",thumbnails:['../assets/webeees/1.jpg','../assets/webeees/2.jpg','../assets/webeees/3.jpg','../assets/webeees/4.jpg','../assets/webeees/5.jpg','../assets/webeees/6.jpg','../assets/webeees/7.jpg','../assets/webeees/8.jpg','../assets/webeees/9.jpg','../assets/webeees/10.jpg'] },
+            { id:2, image : "../assets/hikmah institute/2.jpg", title: "Hikmah Institute", description: "Description of Project 2. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",thumbnails:['../assets/hikmah institute/1.jpg','../assets/hikmah institute/2.jpg','../assets/hikmah institute/3.jpg','../assets/hikmah institute/4.jpg','../assets/hikmah institute/5.jpg','../assets/hikmah institute/6.jpg','../assets/hikmah institute/7.jpg']  },
+            { id:3, image : "../assets/assist finder/3.jpeg", title: "Assist Finder", description: "Description of Project 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit." ,thumbnails:['../assets/assist finder/1.jpg','../assets/assist finder/2.jpg','../assets/assist finder/3.jpg','../assets/assist finder/4.jpg','../assets/assist finder/5.jpg','../assets/assist finder/6.jpg','../assets/assist finder/7.jpg','../assets/assist finder/8.jpg','../assets/assist finder/9.jpg','../assets/assist finder/10.jpg'] },
+            { id:4, image : "../assets/meu exotico/2.jpg", title: "Meu Exotico", description: "Description of Project 2. Lorem ipsum dolor sit amet, consectetur adipiscing elit." ,thumbnails:['../assets/meu exotico/1.jpg','../assets/meu exotico/2.jpg','../assets/meu exotico/3.jpg','../assets/meu exotico/4.jpg','../assets/meu exotico/5.jpg','../assets/meu exotico/6.jpg','../assets/meu exotico/7.jpg','../assets/meu exotico/8.jpg','../assets/meu exotico/9.jpg','../assets/meu exotico/10.jpg'] },
+            { id:5, image : "../assets/food recommendation system/1.jpg", title: "Food Recommendation System", description: "Description of Project 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",thumbnails:['../assets/food recommendation system/1.jpg','../assets/food recommendation system/2.jpg','../assets/food recommendation system/3.jpg','../assets/food recommendation system/4.jpg','../assets/food recommendation system/5.jpg','../assets/food recommendation system/6.jpg','../assets/food recommendation system/7.jpg','../assets/food recommendation system/8.jpg','../assets/food recommendation system/9.jpg','../assets/food recommendation system/10.jpg']  },
+            { id:6, image : "../assets/ecommerce/1.jpg", title: "Ecommerce Store", description: "Description of Project 2. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",thumbnails:['../assets/ecommerce/1.jpg','../assets/ecommerce/2.jpg','../assets/ecommerce/3.jpg','../assets/ecommerce/4.jpg','../assets/ecommerce/5.jpg','../assets/ecommerce/6.jpg','../assets/ecommerce/7.jpg','../assets/ecommerce/8.jpg','../assets/ecommerce/9.jpg','../assets/ecommerce/10.jpg']  },
+            { id:7, image : "../assets/kind driver app/3.jpg", title: "Kind Driver App", description: "Description of Project 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",thumbnails:['../assets/kind driver app/1.jpg','../assets/kind driver app/2.jpg','../assets/kind driver app/3.jpg','../assets/kind driver app/4.jpg','../assets/kind driver app/5.jpg','../assets/kind driver app/6.jpg','../assets/kind driver app/7.jpg','../assets/kind driver app/8.jpg','../assets/kind driver app/9.jpg','../assets/kind driver app/10.jpg']  },
+            { id:8, image : "../assets/webeees admin panel/1.png", title: "WeBeees Admin Panel", description: "Description of Project 2. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",thumbnails:['../assets/webeees admin panel/1.jpg','../assets/webeees admin panel/2.jpg','../assets/webeees admin panel/3.jpg','../assets/webeees admin panel/4.jpg','../assets/webeees admin panel/5.jpg','../assets/webeees admin panel/6.jpg','../assets/webeees admin panel/7.jpg','../assets/webeees admin panel/8.jpg','../assets/webeees admin panel/9.jpg','../assets/webeees admin panel/10.jpg']  },
+            // Add more project data as needed
+        ];
+
+        // Function to create a project card
+        function createProjectCard(id, image, title, description, detailsPage) {
+            const card = document.createElement('div');
+            card.className = 'col-6 col-md-3';
+            card.innerHTML = `
+                <div class="card project-card">
+                    <img src="${image}" class="card-img-top project-image" alt="Project Image">
+                    <div class="card-body">
+                        <h5 class="card-title">${title}</h5>
+                        <p class="card-text">${description}</p>
+                        <a data-id="${id}" onclick="portfolio_details(this)" class="btn btn-primary">View Details</a>
+                    </div>
+                </div>
+            `;
+            return card;
+        }
+
+        // Function to render project cards
+        function renderProjectCards(projects) {
+            const container = document.getElementById('projectContainer');
+            projects.forEach(project => {
+                const card = createProjectCard(project.id, project.image, project.title, project.description, `project_details.html?id=${encodeURIComponent(project.title)}`);
+                container.appendChild(card);
+            });
+        }
+
+        // Render project cards on page load
+        window.onload = function () {
+            renderProjectCards(projects);
+        };
+        function portfolio_details(elem){
+            // var  details = {
+            //     1:{
+            //         title:"WeBeees",
+            //         description: "Description of Project 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+            //         baseImg :"assets/webees/1.jpg",
+            //         thumbnailImg :{
+            //             1:"assets/webees/1.jpg",
+            //             2:"assets/webees/",
+            //         }
+            //     }
+            // }
+            $("#details").modal("show");
+            var id = $(elem).data("id");
+            const projectDetails = projects.find(project => project.id === id);
+
+            if (projectDetails) {
+            console.log('Project found:', projectDetails);
+            // Access individual properties
+            const { id, image, title, description, thumbnails } = projectDetails;
+                // console.log('ID:', id);
+                // console.log('Image:', image);
+                // console.log('Title:', title);
+                // console.log('Description:', description);
+                $('.modal-title').html(title);
+                $('.title').html(title);
+                $('.desc').html(description);
+                $('.base_img').attr('src',image);
+                // Clear previous thumbnails
+                $('.thumbnails-container').empty();
+
+                // Append each thumbnail to the modal
+                for (var i = 0; i < thumbnails.length; i++) {
+                    var thumbnailImg = $('<img>', { src: thumbnails[i], class: 'thumbnail-img', alt: 'Thumbnail' });
+                    $('.thumbnails-container').append(thumbnailImg);
+                }
+            } else {
+                console.log(`Project with id ${projectId} not found.`);
+            }
+        }
+    </script>
+    <!-- The Modal -->
+    <div class="modal fade" id="details">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+        
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title"></h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+        
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-5">
+                            <img src="" class="base_img" alt="">
+                            
+                        </div>
+                        <div class="col-md-7">
+                            <h2 class="title"></h2>
+                            <p class="desc"></p>
+                            <div class="thumbnails-container"></div>
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                </div>
+        
+            </div>
+        </div>
+    </div>
+</body>
+</html>

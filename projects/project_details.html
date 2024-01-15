@@ -1,0 +1,57 @@
+<!-- project_details.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>Project Details</title>
+    <!-- Add your project details page styles here -->
+</head>
+<body>
+    <!-- Add content and details specific to each project here -->
+    <h1>Project Details</h1>
+    <div id="projectDetails">
+        <!-- Project details content will be dynamically added here using JavaScript -->
+    </div>
+
+    <script>
+        // Function to extract query parameters from the URL
+        function getQueryParam(name) {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(name);
+        }
+
+        // Get the project ID from the query parameter
+        const projectId = getQueryParam('id');
+
+        // Function to fetch and display project details
+        function fetchProjectDetails(projectId) {
+            // Replace the following with your logic to fetch project details based on the project ID
+            // Example: Fetch project details using an API or from a data source
+            const projectDetails = {
+                title: "Project Title",
+                description: "Project Description...",
+                // Add more details as needed
+            };
+
+            // Display project details on the page
+            const projectDetailsContainer = document.getElementById('projectDetails');
+            projectDetailsContainer.innerHTML = `
+                <h2>${projectDetails.title}</h2>
+                <p>${projectDetails.description}</p>
+                <!-- Add more HTML to display additional project details -->
+            `;
+        }
+
+        // Fetch and display project details on page load
+        window.onload = function () {
+            fetchProjectDetails(projectId);
+        };
+    </script>
+
+    <!-- Include Bootstrap and other necessary scripts if needed -->
+
+    <!-- Add your project details page scripts here -->
+</body>
+</html>

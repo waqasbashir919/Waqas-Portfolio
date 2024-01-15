@@ -411,6 +411,24 @@ html{
         padding-bottom: 2em;
     }   
 }
+.skills .skill {
+    margin-bottom: 30px;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+
+}
+
+.skills .label {
+    font-weight: bold;
+    display: block;
+    margin-top: 10px;
+    margin-right: 20px;
+}
+.skills .icon {
+    font-size: 40px;
+    color: #3498db; /* Adjust the color as needed */
+}
 
                                       /* contact */
 .contact{
@@ -503,6 +521,19 @@ html{
     .contact .row .left-column .list-group-item{
         font-size: 3vw;
     }
+}
+
+.contact .icon-row {
+    display: flex;
+    justify-content: space-between;
+    /* max-width: 300px; Adjust the width as needed */
+    margin: 20px auto;
+}
+
+.contact .icon{
+    font-size: 30px;
+    color: white;
+    text-decoration: none;
 }
                                                     /* footer */
 .footer .list-group-item{
